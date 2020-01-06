@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:ViewModels="clr-namespace:BanNuochoa.ViewModels"
+             BackgroundColor="{StaticResource PrimaryColor}"
+             mc:Ignorable="d"
+             x:Class="BanNuochoa.Views.OrderPage">
+
+    <ContentPage.Content>
+        <!--<StackLayout HorizontalOptions="Center" VerticalOptions="Center">
+                <Image x:Name="p_image" Source="{Binding img}" />
+                --><!--<Entry x:Name="tensanpham" Placeholder="tên sản phẩm" Text="{Binding tensanpham}"/>--><!--
+        <Label Text="{Binding tensanpham}"/>
+        <Entry Placeholder="Số lượng" Text="{Binding quantity}"/>
+                <Label  Text="{Binding price}"/>
+                <Entry Placeholder="tên khách hàng" Text="{Binding customer}"/>
+                <Entry Placeholder="Ghi chú" Text="{Binding Note}" />
+                
+                -
+        <Button Text="Đặt hàng" CornerRadius="3" Command="{Binding DathangCommand}"/>
+                <Button Text="Trở về"
+                Clicked="Back_Clicked" />
+            </StackLayout>-->
+    <ScrollView Padding="{OnPlatform Android='0,50'}">
+
+        <StackLayout  Margin="40,0"
+                      Spacing="10">
+            <Label Text="Đặt hàng"
+                   FontAttributes="Bold"
+                   FontSize="46"
+                   TextColor="White"
+                   Margin="{OnPlatform Android='0,0,0,20'}"
+                   HorizontalTextAlignment="Center" />
+            <Frame Padding="10,0"
+                   CornerRadius="5">
+                    <Label x:Name="tensanpham" Text="{Binding tensanpham}"/>
+                </Frame>
+
+            <Frame Padding="10,0"
+                   CornerRadius="5">
+                    <Entry Placeholder="Số lượng"
+                                      ReturnType="Next"
+                                      Text="{Binding quantity}" />
+            </Frame>
+
+            <Frame Padding="10,0"
+                   CornerRadius="5">
+                    <Label  Text="{Binding price}"/>
+
+                </Frame>
+
+            <Frame Padding="10,0"
+                   CornerRadius="5">
+                    <Entry Placeholder="tên khách hàng"  
+                                      
+                                      Text="{Binding customer}" />
+            </Frame>
+
+            <Frame Padding="10,0"
+                   CornerRadius="5">
+                    <Entry Placeholder="Ghi chú"  x:Name="ghichu"
+                                      
+                                      Text="{Binding Note}" />
+            </Frame>
+
+            
+
+            <Button Text="Đặt hàng"                    
+                    Style="{StaticResource DarkButtonStyle}" Command="{Binding DathangCommand}"/>
+            <Button Text="Trở về" Style="{StaticResource DarkButtonStyle}" Clicked="Back_Clicked" />
+
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+
+</ContentPage>

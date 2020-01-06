@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="BanNuochoa.App">
+    <Application.Resources>
+        <ResourceDictionary>
+            <Color x:Key="PrimaryColor">#804000</Color>
+            <Color x:Key="DarkColor">#9b003d</Color>
+            <Color x:Key="DarkTextColor">#ffffff</Color>
+
+            <Style x:Key="DarkButtonStyle"
+                   TargetType="Button">
+                <Setter Property="HeightRequest"
+                        Value="40" />
+                <Setter Property="CornerRadius"
+                        Value="5" />
+                <Setter Property="TextColor"
+                        Value="{StaticResource DarkTextColor}" />
+                <Setter Property="BackgroundColor"
+                        Value="{StaticResource DarkColor}" />
+            </Style>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>
